@@ -580,11 +580,15 @@ if (currentURL.indexOf('sharelink=1') !== -1) {
     function pprintTicket() {
       // Simula hacer clic en el botón de impresión
       document.getElementById("printButton").click();
-      // Imprimir automáticamente
-      window.print();
+    }
+
+    // Función que se ejecuta después de la impresión
+    window.onafterprint = function() {
       // Cerrar la ventana después de imprimir
       window.close();
-    }
+    };
+
+
   </script>
 
 </body>
